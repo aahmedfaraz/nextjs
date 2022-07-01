@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .footer {
@@ -113,4 +114,33 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.btn {
+  margin-top: 30px;
+  min-width: 400px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: rgb(35, 145, 255);
+  color: white;
+  text-align: center;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.li {
+  margin: 10px 0;
+  min-width: 400px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: rgb(171, 35, 255);
+  color: white;
+  text-align: center;
+}
+
+.main ul {
+  list-style-type: none;
+  padding-left: 0;
 }
