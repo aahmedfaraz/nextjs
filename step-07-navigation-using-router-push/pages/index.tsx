@@ -13,7 +13,13 @@ const Home: NextPage = (props) => {
     const timeout = setTimeout(() => {
       setValue(value + 20)
       if(value === 80){
-        router.push('/posts')
+        // router.push('/posts')
+        router.push({
+          pathname: '/posts',
+          query: {
+            foo: 'bar'
+          }
+        })
         clearTimeout(timeout)
       }
     }, 1000);
