@@ -10,7 +10,7 @@ const Home: NextPage = (props) => {
     <h1 className={styles.title}>
       This is Homepage
     </h1>
-    <Link className={styles.button} href="/posts">Goto Posts</Link>
+    <span className={styles.button}><Link href="/posts">Goto Posts</Link></span>
     </>
   )
 }
