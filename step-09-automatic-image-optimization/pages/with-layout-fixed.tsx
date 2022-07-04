@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import AhmedSpecialImageElement from '../components/AhmedSpecialImageElement'
 
 const Home: NextPage = () => {
   return (
@@ -16,12 +16,12 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           With Fixed <span className={styles.highlight}>Width</span> and <span className={styles.highlight}>Height</span> and Layout <span className={styles.highlight}>Fixed</span>
         </h1>
-        <Image className={styles.img} src="https://i.pinimg.com/originals/b5/47/98/b54798f53bca8c864637eee3ff47497e.jpg" width={250} height={200} layout="fixed" alt="jeep-img" />
-        <Image className={styles.img} src="https://i.pinimg.com/originals/b5/47/98/b54798f53bca8c864637eee3ff47497e.jpg" width={250} height={250}  layout="fixed" alt="jeep-img" />
-        <Image className={styles.img} src="https://i.pinimg.com/originals/b5/47/98/b54798f53bca8c864637eee3ff47497e.jpg" width={400} height={250}  layout="fixed" alt="jeep-img" />
-        <Image className={styles.img} src="https://i.pinimg.com/originals/b5/47/98/b54798f53bca8c864637eee3ff47497e.jpg" width={250} height={300}  layout="fixed" alt="jeep-img" />
-        <Image className={styles.img} src="https://i.pinimg.com/originals/b5/47/98/b54798f53bca8c864637eee3ff47497e.jpg" width={300} height={350}  layout="fixed" alt="jeep-img" />
-        <Image className={styles.img} src="https://i.pinimg.com/originals/b5/47/98/b54798f53bca8c864637eee3ff47497e.jpg" width={600} height={350}  layout="fixed" alt="jeep-img" />
+        <AhmedSpecialImageElement width={250} height="200" layout="fixed" />
+        <AhmedSpecialImageElement width={250} height="250" layout="fixed" />
+        <AhmedSpecialImageElement width={400} height="250" layout="fixed" />
+        <AhmedSpecialImageElement width={250} height="300" layout="fixed" />
+        <AhmedSpecialImageElement width={300} height="350" layout="fixed" />
+        <AhmedSpecialImageElement width={600} height="350" layout="fixed" />
       </main>
 
       <footer className={styles.footer}>
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
         >
           Powered by{' '}
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            VERCEL
           </span>
         </a>
       </footer>
