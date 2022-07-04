@@ -138,6 +138,8 @@
 
 .nav {
   position: fixed;
+  top: 0;
+  left: 0;
   background-color: #c7e1ff;
   color: white;
   width: 100%;
