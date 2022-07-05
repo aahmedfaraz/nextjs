@@ -1,0 +1,19 @@
+.btn {
+  cursor: pointer;
+  background: linear-gradient(to bottom , tomato, red);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.btn:active {
+  transform: scale(0.95) !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
