@@ -14,3 +14,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+button {
+  cursor: pointer;
+  background: linear-gradient(to bottom, rgb(255, 69, 36), rgb(116, 0, 0));
+  color: white;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+}

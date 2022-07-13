@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-const Home: NextPage = () => {
+const About: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 style={{color: 'tomato'}}>Home Page</h1>
+        <h1 style={{color: 'dodgerblue'}}>About Page</h1>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, cupiditate non veniam soluta distinctio ipsam provident vitae voluptas dignissimos ea, vero voluptatem vel sapiente culpa delectus quas error doloremque ad iste est. Optio laboriosam quidem facere quod quisquam ea, ullam culpa alias dolores eum fugiat architecto! Et tempora tenetur, sit ab porro cupiditate ut molestias distinctio explicabo laborum libero. Cumque, repellendus. Odio cumque tenetur officiis corporis eos distinctio expedita optio ut beatae magni. Aperiam ex nostrum eos, impedit quisquam voluptates dolore cumque eum molestias necessitatibus praesentium similique, consequuntur in rerum sequi ipsa corrupti qui odio veniam? Praesentium dignissimos itaque temporibus.</p>
       </main>
 
@@ -33,4 +33,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default About
