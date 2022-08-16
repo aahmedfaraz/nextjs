@@ -1,9 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useState, useEffect } from 'react'
 import styles from '../styles/Home.module.css'
 import { useQuery, gql } from '@apollo/client'
-import client from '../lib/apollo'
 
 const missionsLimit = 10;
 const GET_MISSIONS = gql`
@@ -20,7 +18,7 @@ const GET_MISSIONS = gql`
 `;
 
 const Home: NextPage = () => {
-  let res = useQuery(GET_MISSIONS);
+  let {loading, data} = useQuery(GET_MISSIONS);
   
   return (
     <div className={styles.container}>
@@ -33,10 +31,10 @@ const Home: NextPage = () => {
         <h1>SpaceX Missions</h1>
         <ol>
           {
-            !res?.data?.missions && <h1>Loading SpaceX Missions ...</h1>
+            loading && <h1>Loading SpaceX Missions ...</h1>
           }
           {
-            res?.data?.missions && res?.data?.missions.map((mission:any) => (
+            !loading && data && data.missions.map((mission:any) => (
               <li key={mission.id}>
                 <h2>Manufacturers : {mission.manufacturers.join(", ")}</h2>
                 <p><span style={{color: 'tomato'}}>Name</span> : {mission.name}</p>
