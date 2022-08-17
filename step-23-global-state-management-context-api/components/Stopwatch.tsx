@@ -1,4 +1,4 @@
-import { NextComponentType } from "next";
+import { NextComponentType, NextPageContext } from "next";
 import { useContext, useEffect } from "react";
 import stopwatchContext from "./context/stopwatchContext";
 import { TimestampState } from "./context/types";
@@ -7,15 +7,17 @@ const Stopwatch : NextComponentType = () => {
     const {timestamp, setTimestamp} = useContext<TimestampState>(stopwatchContext)
     const {hours, minutes, seconds} = timestamp;
     useEffect(() => {
-        const timeout = setTimeout(() => {
-            setTimestamp({timestamp : {
-                hours : timestamp.minutes === 59 ? timestamp.hours + 1 : timestamp.hours,
-                minutes : timestamp.seconds === 59 ? timestamp.minutes + 1 : timestamp.minutes,
-                seconds : timestamp.seconds === 59 ? 0 : timestamp.seconds + 1,
-            }})
-            clearTimeout(timeout)
+        const timer = setTimeout(() => {
+            setTimestamp({
+                    timestamp : {
+                    hours : timestamp.minutes === 59 ? timestamp.hours + 1 : timestamp.hours,
+                    minutes : timestamp.minutes === 59 ? 0 : timestamp.seconds === 59 ? timestamp.minutes + 1 : timestamp.minutes,
+                    seconds : timestamp.seconds === 59 ? 0 : timestamp.seconds + 1,
+                }
+            });
+            clearTimeout(timer)
         }, 1000);
-    }, [timestamp])
+    }, [timestamp, setTimestamp])
     
     return (
         <div>

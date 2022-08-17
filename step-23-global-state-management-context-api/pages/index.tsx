@@ -3,14 +3,16 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Stopwatch from '../components/Stopwatch'
 import styles from '../styles/Home.module.css'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { TimestampState } from '../components/context/types'
 import stopwatchContext from '../components/context/stopwatchContext'
 
 const Home: NextPage = () => {
   const { setTimestamp } = useContext<TimestampState>(stopwatchContext)
 
-  const reset = () => setTimestamp({timestamp : { hours : 0, minutes : 0, seconds : 0}})
+  const reset = () => {
+    setTimestamp({timestamp : { hours : 0, minutes : 0, seconds : 0}});
+  }
   return (
     <div className={styles.container}>
       <Head>
