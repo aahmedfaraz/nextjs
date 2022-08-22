@@ -1,8 +1,10 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import counterSlice from "./counter/counterSlice";
+import todoSlice from "./todo/todoSlice";
+import timerSlice from "./timer/timerSlice";
 
 const rootReducer = combineReducers({
-    counter: counterSlice
+    todos : todoSlice,
+    timer : timerSlice,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

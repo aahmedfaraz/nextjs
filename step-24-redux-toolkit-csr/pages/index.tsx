@@ -1,11 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import Timer from '../components/Timer'
-import TodoList from '../components/TodoList'
 import styles from '../styles/Home.module.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../store/reducers';
+import { increment, decrement } from '../store/reducers/counter/counterSlice';
 
 const Home: NextPage = () => {
+  const dispatch = useDispatch();
+  const { count } = useSelector((state : RootState) => state.counter);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,8 +17,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Timer />
-        <TodoList />
+        <p>Counter : {count}</p>
+        <button onClick={() => dispatch(increment())}>+</button>
+        &nbsp;&nbsp;
+        <button onClick={() => dispatch(decrement())}>-</button>
       </main>
     </div>
   )
