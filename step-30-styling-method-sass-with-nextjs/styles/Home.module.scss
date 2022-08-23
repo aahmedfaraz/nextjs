@@ -1,0 +1,39 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #2196f3;
+}
+.title {
+  color: #f5f5f5;
+}
+
+.button_default {
+  cursor: pointer;
+  padding: 10px 40px;
+  background-color: gray;
+  color: white;
+  border-radius: 5px;
+  margin: 20px;
+
+  &:hover {
+    background-color: rgb(47, 47, 47);
+  }
+
+  &:active {
+    transform: scale(0.95)
+  }
+}
+
+.button_success {
+  @extend .button_default;
+  background-color: limegreen;
+}
+
+.button_danger {
+  @extend .button_default;
+  background-color: orangered;
+}
